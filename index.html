@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FRAMES — Self-Photo Studio in Makati · Book a 45-min Session</title>
+<meta name="description" content="Private self-photo studio in Legazpi Village, Makati. 45-minute sessions from ₱2,500. Unlimited photos, no photographer watching. Book online with GCash or Maya.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Syne', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+        serif: ['Newsreader', 'serif'],
+      },
+      colors: {
+        paper: '#FBF9F5',
+        cream: '#F4F1EA',
+        linen: '#E8E3D8',
+        ink: '#141416',
+        graphite: '#5A5A62',
+        stone: '#8A8A93',
+        tangerine: '#E65100',
+        tangerineDark: '#B33E00',
+        sage: '#5A7A4A',
+      }
+    }
+  }
+}
+</script>
+
+<style>
+  * { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { background: #FBF9F5; color: #141416; font-feature-settings: "ss01", "cv11"; }
+
+  :focus-visible {
+    outline: 2px solid #E65100;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  button:focus-visible, a:focus-visible { outline-offset: 4px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  .ph-warm-1 {
+    background:
+      radial-gradient(ellipse at 30% 30%, #F4D3B0 0%, transparent 55%),
+      radial-gradient(ellipse at 70% 70%, #C97B4A 0%, transparent 55%),
+      linear-gradient(135deg, #E8B896 0%, #B87042 100%);
+  }
+  .ph-warm-2 {
+    background:
+      radial-gradient(ellipse at 25% 75%, #FFDDB8 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 30%, #D89B7B 0%, transparent 55%),
+      linear-gradient(160deg, #F0C9A8 0%, #9B5F3D 100%);
+  }
+  .ph-warm-3 {
+    background:
+      radial-gradient(ellipse at 40% 40%, #E5B890 0%, transparent 55%),
+      radial-gradient(ellipse at 65% 75%, #B27048 0%, transparent 55%),
+      linear-gradient(120deg, #D89B6F 0%, #7A4528 100%);
+  }
+  .ph-cream {
+    background:
+      radial-gradient(ellipse at 30% 30%, #FFFFFF 0%, transparent 50%),
+      radial-gradient(ellipse at 75% 60%, #F4E8DC 0%, transparent 55%),
+      linear-gradient(150deg, #FBF5EC 0%, #E8C9AE 100%);
+  }
+
+  .ph-grain { position: relative; }
+  .ph-grain::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.25'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  .mobile-cta {
+    transform: translateY(100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .mobile-cta.visible { transform: translateY(0); }
+
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+  .reveal.active { opacity: 1; transform: translateY(0); }
+
+  .slot-btn { transition: background-color 0.15s, border-color 0.15s, color 0.15s; }
+  .slot-btn:active { transform: scale(0.98); }
+
+  .marquee { display: flex; overflow: hidden; }
+  .marquee-track {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 35s linear infinite;
+    will-change: transform;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .faq-icon { transform: rotate(45deg); }
+
+  input[type="text"], input[type="tel"], input[type="email"] { font-size: 16px; }
+
+  .field-error { border-color: #C62828 !important; }
+  .field-error-msg { color: #C62828; font-size: 11px; margin-top: 4px; display: block; font-family: 'JetBrains Mono', monospace; }
+</style>
+</head>
+
+<body class="font-sans">
+
+<a href="#booking" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[999] focus:px-4 focus:py-2 focus:bg-ink focus:text-paper focus:rounded-full focus:text-sm font-mono">
+  Skip to booking
+</a>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-paper/95 backdrop-blur-md border-b border-ink/[0.06]">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8 h-16 flex items-center justify-between gap-4">
+    <a href="/" class="flex items-center gap-3 shrink-0">
+      <span class="font-display font-extrabold text-xl tracking-tight text-ink">FRAMES</span>
+      <span class="hidden sm:inline-block font-mono text-[10px] text-graphite tracking-widest uppercase border-l border-ink/15 pl-3">
+        Legazpi Village
+      </span>
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-7 font-mono text-[11px] tracking-widest uppercase text-graphite">
+      <a href="#suites" class="hover:text-ink transition-colors py-2">Rooms</a>
+      <a href="#philosophy" class="hover:text-ink transition-colors py-2">Philosophy</a>
+      <a href="#pricing" class="hover:text-ink transition-colors py-2">Pricing</a>
+      <a href="#how" class="hover:text-ink transition-colors py-2">How it works</a>
+      <a href="#faq" class="hover:text-ink transition-colors py-2">FAQ</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <span class="hidden md:flex items-center gap-2 font-mono text-[10px] text-graphite tracking-widest uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-sage" aria-hidden="true"></span>
+        Open daily 11–8
+      </span>
+      <a href="#booking" class="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 bg-ink hover:bg-tangerine text-paper text-sm font-medium rounded-full transition-colors duration-200">
+        <span>Book</span>
+        <span class="hidden sm:inline">a session</span>
+        <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="relative pt-12 md:pt-20 pb-16 md:pb-24">
+  <div class="absolute -top-40 -right-40 w-[500px] h-[500px] rounded-full bg-tangerine/[0.06] blur-[100px] pointer-events-none"></div>
+
+  <div class="relative max-w-[1200px] mx-auto px-5 md:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div class="lg:col-span-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 mb-6 rounded-full bg-cream border border-ink/[0.06] font-mono text-[10px] tracking-widest uppercase text-graphite">
+          <span class="w-1.5 h-1.5 rounded-full bg-tangerine"></span>
+          Private · Self-photo · Makati
+        </div>
+
+        <h1 class="font-display font-extrabold text-ink text-[clamp(2.25rem,6.5vw,4.75rem)] leading-[1.02] tracking-[-0.02em]">
+          Take your own<br>
+          <span class="font-serif italic font-normal text-tangerine">portraits.</span>
+        </h1>
+
+        <p class="mt-6 text-base md:text-lg text-graphite leading-relaxed max-w-lg font-light">
+          A private photo studio in Legazpi Village where you press the shutter. Bring your friends, your partner, or your dog. Stay 45 minutes. Take home unlimited photos.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+          <span class="font-display font-extrabold text-3xl md:text-4xl text-ink tracking-tight">₱2,500</span>
+          <span class="text-graphite text-sm md:text-base font-light">per 45-min session · up to 5 guests</span>
+        </div>
+
+        <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+          <a href="#booking" class="group inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-tangerine hover:bg-tangerineDark text-paper font-medium rounded-full transition-colors duration-200 shadow-[0_8px_20px_-8px_rgba(230,81,0,0.5)]">
+            <span>Check availability</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+          </a>
+          <a href="#suites" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-ink font-medium rounded-full border border-ink/15 hover:border-ink/40 transition-colors">
+            See the rooms
+          </a>
+        </div>
+
+        <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-graphite font-mono">
+          <span class="flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5 text-tangerine"></i> Live Calendar Sync</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-tangerine"></i> PayMongo Secured</span>
+          <span class="flex items-center gap-1.5"><i data-lucide="credit-card" class="w-3.5 h-3.5 text-tangerine"></i> GCash · Maya · Cards</span>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 relative">
+        <div class="grid grid-cols-5 grid-rows-6 gap-3 h-[420px] md:h-[520px]">
+          <div class="col-span-3 row-span-4 rounded-2xl overflow-hidden ph-warm-1 ph-grain relative border border-ink/[0.04]">
+            <div class="absolute bottom-4 left-4 right-4">
+              <div class="inline-block px-3 py-1.5 rounded-full bg-paper/95 backdrop-blur text-[10px] font-mono tracking-widest uppercase text-ink">
+                Barkada · 3PM
+              </div>
+            </div>
+          </div>
+          <div class="col-span-2 row-span-3 rounded-2xl overflow-hidden ph-cream ph-grain border border-ink/[0.04]"></div>
+          <div class="col-span-2 row-span-3 row-start-4 rounded-2xl overflow-hidden ph-warm-3 ph-grain relative border border-ink/[0.04]">
+            <div class="absolute top-4 left-4">
+              <div class="inline-block px-3 py-1.5 rounded-full bg-tangerine text-paper text-[10px] font-mono tracking-widest uppercase">
+                Pets welcome
+              </div>
+            </div>
+          </div>
+          <div class="col-span-3 row-span-2 row-start-5 rounded-2xl overflow-hidden ph-warm-2 ph-grain border border-ink/[0.04]"></div>
+        </div>
+        <p class="mt-4 text-center text-xs text-graphite font-serif italic">
+          Real sessions, real people. Bring whoever you want.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="border-y border-ink/[0.06] bg-cream/60 py-4 overflow-hidden">
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track font-display font-bold text-base md:text-lg tracking-tight text-ink/80">
+      <span class="mx-6">Unlimited photos</span><span class="mx-6 text-tangerine">·</span>
+      <span class="mx-6">45-minute sessions</span><span class="mx-6 text-tangerine">·</span>
+      <span class="mx-6">No photographer watching</span><span class="mx-6 text-tangerine">·</span>
+      <span class="mx-6">Play your own music</span><span class="mx-6 text-tangerine">·</span>
+      <span class="mx-6">Unlimited photos</span><span class="mx-6 text-tangerine">·</span>
+      <span class="mx-6">45-minute sessions</span><span class="mx-6 text-tangerine">·</span>
+      <span class="mx-6">No photographer watching</span><span class="mx-6 text-tangerine">·</span>
+      <span class="mx-6">Play your own music</span><span class="mx-6 text-tangerine">·</span>
+    </div>
+  </div>
+</div>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy" class="py-16 md:py-24 border-b border-ink/[0.06] bg-paper">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+      <div class="lg:col-span-7 reveal">
+        <div class="font-mono text-[10px] tracking-widest uppercase text-tangerine mb-4">Studio Philosophy</div>
+        <h2 class="font-display font-extrabold text-ink text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6">
+          Why at FRAMES<br>
+          <span class="font-serif italic font-normal text-tangerine">we don't have monitors.</span>
+        </h2>
+        <div class="space-y-4 text-graphite text-base leading-relaxed font-light">
+          <p>
+            When there is a screen in the room, people pose for the screen. They freeze, adjust their posture after every click, and obsess over micro-flaws.
+          </p>
+          <p>
+            By taking away the live monitor, we restore your presence. You look at the person in front of you, you laugh without second-guessing your smile, and you just have fun.
+          </p>
+          <div class="font-serif italic text-ink text-xl pt-2 border-l-2 border-tangerine pl-4">
+            "The clicker is in your hand. The moment is yours."
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 grid grid-cols-2 gap-3.5 font-mono text-xs reveal">
+        <div class="p-4 rounded-xl bg-cream border border-ink/[0.06]">
+          <div class="text-tangerine font-bold mb-1">Godox Strobes</div>
+          <p class="text-graphite text-[11px] leading-relaxed">Soft parabolic lighting calibrated for natural skin tones.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-cream border border-ink/[0.06]">
+          <div class="text-tangerine font-bold mb-1">Wireless Clicker</div>
+          <p class="text-graphite text-[11px] leading-relaxed">Take photos at your own rhythm. Zero countdown pressure.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-cream border border-ink/[0.06]">
+          <div class="text-tangerine font-bold mb-1">Bluetooth Audio</div>
+          <p class="text-graphite text-[11px] leading-relaxed">Connect your phone or stream the FRAMES studio playlist.</p>
+        </div>
+        <div class="p-4 rounded-xl bg-cream border border-ink/[0.06]">
+          <div class="text-tangerine font-bold mb-1">100% Privacy</div>
+          <p class="text-graphite text-[11px] leading-relaxed">Private enclosed room. No staff inside during your 45 mins.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUITES -->
+<section id="suites" class="py-16 md:py-24 border-b border-ink/[0.06] bg-cream/40">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 mb-12 items-end">
+      <div class="lg:col-span-7 reveal">
+        <div class="font-mono text-[10px] tracking-widest uppercase text-tangerine mb-4">The rooms</div>
+        <h2 class="font-display font-extrabold text-ink text-3xl md:text-5xl leading-[1.05] tracking-tight">
+          Two rooms.<br>
+          <span class="font-serif italic font-normal text-graphite">Same setup, different feel.</span>
+        </h2>
+      </div>
+      <div class="lg:col-span-5 reveal">
+        <p class="text-graphite text-sm md:text-base leading-relaxed font-light">
+          Both suites come with Godox strobes, a wireless clicker, and a Bluetooth speaker. The only difference is the walls.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      <!-- Concrete -->
+      <article class="reveal bg-paper rounded-2xl border border-ink/[0.06] overflow-hidden">
+        <div class="relative aspect-[4/3] ph-warm-3 ph-grain">
+          <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-paper/95 backdrop-blur text-[10px] font-mono tracking-widest uppercase text-ink">
+            Suite 01
+          </div>
+          <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-tangerine text-paper text-[10px] font-mono tracking-widest uppercase">
+            Warm · Moody
+          </div>
+        </div>
+        <div class="p-6 md:p-7">
+          <div class="flex items-baseline justify-between mb-3 gap-4">
+            <h3 class="font-display font-bold text-2xl text-ink">Concrete Room</h3>
+            <span class="font-mono text-[10px] tracking-widest uppercase text-graphite">45 min</span>
+          </div>
+          <p class="text-sm text-graphite leading-relaxed mb-6 font-light">
+            Raw textured concrete with deep shadows and warm mid-century accents. Perfect for high-contrast B&W and moodier tones.
+          </p>
+
+          <ul class="space-y-2 mb-6 text-sm">
+            <li class="flex items-center gap-2 text-graphite"><i data-lucide="check" class="w-4 h-4 text-sage"></i> Up to 10 guests</li>
+            <li class="flex items-center gap-2 text-graphite"><i data-lucide="check" class="w-4 h-4 text-sage"></i> Unlimited photos</li>
+            <li class="flex items-center gap-2 text-graphite"><i data-lucide="check" class="w-4 h-4 text-sage"></i> Speaker + clicker</li>
+          </ul>
+
+          <div class="flex items-center justify-between pt-5 border-t border-ink/[0.08]">
+            <div>
+              <div class="font-mono text-[10px] tracking-widest uppercase text-graphite">From</div>
+              <div class="font-display font-extrabold text-2xl text-ink">₱2,500</div>
+            </div>
+            <button type="button" onclick="setRoomAndScroll('concrete')" class="inline-flex items-center gap-2 px-5 py-2.5 bg-ink hover:bg-tangerine text-paper text-sm font-medium rounded-full transition-colors">
+              Select
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- White -->
+      <article class="reveal bg-paper rounded-2xl border border-ink/[0.06] overflow-hidden">
+        <div class="relative aspect-[4/3] ph-cream ph-grain">
+          <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-paper/95 backdrop-blur text-[10px] font-mono tracking-widest uppercase text-ink">
+            Suite 02
+          </div>
+          <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-sage text-paper text-[10px] font-mono tracking-widest uppercase">
+            Bright · Clean
+          </div>
+        </div>
+        <div class="p-6 md:p-7">
+          <div class="flex items-baseline justify-between mb-3 gap-4">
+            <h3 class="font-display font-bold text-2xl text-ink">White Room</h3>
+            <span class="font-mono text-[10px] tracking-widest uppercase text-graphite">45 min</span>
+          </div>
+          <p class="text-sm text-graphite leading-relaxed mb-6 font-light">
+            Seamless white backdrop with soft beauty lighting. The kind of bright that makes everyone look good together.
+          </p>
+
+          <ul class="space-y-2 mb-6 text-sm">
+            <li class="flex items-center gap-2 text-graphite"><i data-lucide="check" class="w-4 h-4 text-sage"></i> Up to 10 guests</li>
+            <li class="flex items-center gap-2 text-graphite"><i data-lucide="check" class="w-4 h-4 text-sage"></i> Unlimited photos</li>
+            <li class="flex items-center gap-2 text-graphite"><i data-lucide="check" class="w-4 h-4 text-sage"></i> Speaker + clicker</li>
+          </ul>
+
+          <div class="flex items-center justify-between pt-5 border-t border-ink/[0.08]">
+            <div>
+              <div class="font-mono text-[10px] tracking-widest uppercase text-graphite">From</div>
+              <div class="font-display font-extrabold text-2xl text-ink">₱2,500</div>
+            </div>
+            <button type="button" onclick="setRoomAndScroll('white')" class="inline-flex items-center gap-2 px-5 py-2.5 bg-ink hover:bg-tangerine text-paper text-sm font-medium rounded-full transition-colors">
+              Select
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Dual Room Buyout -->
+    <div class="mt-6 lg:mt-8 reveal bg-ink text-paper rounded-2xl p-6 md:p-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <div class="md:col-span-7">
+          <div class="inline-block px-3 py-1 mb-3 rounded-full bg-tangerine/20 text-tangerine text-[10px] font-mono tracking-widest uppercase">
+            Best value
+          </div>
+          <h3 class="font-display font-extrabold text-2xl md:text-3xl leading-tight tracking-tight mb-2">
+            Book both rooms
+          </h3>
+          <p class="text-paper/70 text-sm leading-relaxed max-w-lg font-light">
+            Move freely between Concrete and White in one session. Great for barkadas who want variety. Up to 15 guests total.
+          </p>
+        </div>
+        <div class="md:col-span-5 md:text-right">
+          <div class="flex md:flex-col items-baseline md:items-end gap-2 md:gap-0 mb-4">
+            <span class="font-mono text-[10px] tracking-widest uppercase text-paper/50">From</span>
+            <span class="font-display font-extrabold text-3xl md:text-4xl">₱5,000</span>
+          </div>
+          <button type="button" onclick="setRoomAndScroll('both')" class="inline-flex items-center gap-2 px-5 py-3 bg-tangerine hover:bg-tangerineDark text-paper text-sm font-medium rounded-full transition-colors">
+            Select both
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING TABLE -->
+<section id="pricing" class="py-16 md:py-24 border-b border-ink/[0.06]">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mb-12 reveal">
+      <div class="font-mono text-[10px] tracking-widest uppercase text-tangerine mb-4">Pricing</div>
+      <h2 class="font-display font-extrabold text-ink text-3xl md:text-5xl leading-[1.05] tracking-tight">
+        Transparent rates.<br>
+        <span class="font-serif italic font-normal text-graphite">No hidden fees.</span>
+      </h2>
+      <p class="mt-4 text-graphite text-sm md:text-base leading-relaxed font-light">
+        Peak hours are weekdays after 6PM and all weekends. Off-peak is everything else. Guests beyond 5 are ₱500 each. Pets are always free.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 reveal">
+      <div class="bg-paper border border-ink/[0.08] rounded-2xl p-6 md:p-7">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-2 h-2 rounded-full bg-sage"></span>
+          <span class="font-mono text-[10px] tracking-widest uppercase text-graphite">Off-peak</span>
+        </div>
+        <div class="mb-1">
+          <span class="font-display font-extrabold text-3xl text-ink">₱2,500</span>
+          <span class="text-graphite text-sm font-light">/ session</span>
+        </div>
+        <p class="text-xs text-graphite mb-6">Weekdays before 6PM</p>
+        <ul class="space-y-2.5 text-sm pt-5 border-t border-ink/[0.08]">
+          <li class="flex items-start gap-2 text-graphite"><i data-lucide="check" class="w-4 h-4 text-sage mt-0.5 shrink-0"></i> 45-minute session</li>
+          <li class="flex items-start gap-2 text-graphite"><i data-lucide="check" class="w-4 h-4 text-sage mt-0.5 shrink-0"></i> Up to 5 guests included</li>
+          <li class="flex items-start gap-2 text-graphite"><i data-lucide="check" class="w-4 h-4 text-sage mt-0.5 shrink-0"></i> Unlimited photos</li>
+          <li class="flex items-start gap-2 text-graphite"><i data-lucide="check" class="w-4 h-4 text-sage mt-0.5 shrink-0"></i> Full-resolution download</li>
+        </ul>
+      </div>
+
+      <div class="bg-ink text-paper rounded-2xl p-6 md:p-7 relative overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-48 h-48 rounded-full bg-tangerine/25 blur-3xl pointer-events-none"></div>
+        <div class="relative flex items-center justify-between mb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-tangerine"></span>
+            <span class="font-mono text-[10px] tracking-widest uppercase text-paper/70">Peak</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-tangerine text-paper text-[9px] font-mono tracking-widest uppercase">Popular</span>
+        </div>
+        <div class="relative mb-1">
+          <span class="font-display font-extrabold text-3xl">₱3,000</span>
+          <span class="text-paper/60 text-sm font-light">/ session</span>
+        </div>
+        <p class="relative text-xs text-paper/60 mb-6">Weekdays after 6PM · All weekends</p>
+        <ul class="relative space-y-2.5 text-sm pt-5 border-t border-paper/15">
+          <li class="flex items-start gap-2 text-paper/85"><i data-lucide="check" class="w-4 h-4 text-tangerine mt-0.5 shrink-0"></i> 45-minute session</li>
+          <li class="flex items-start gap-2 text-paper/85"><i data-lucide="check" class="w-4 h-4 text-tangerine mt-0.5 shrink-0"></i> Up to 5 guests included</li>
+          <li class="flex items-start gap-2 text-paper/85"><i data-lucide="check" class="w-4 h-4 text-tangerine mt-0.5 shrink-0"></i> Unlimited photos</li>
+          <li class="flex items-start gap-2 text-paper/85"><i data-lucide="check" class="w-4 h-4 text-tangerine mt-0.5 shrink-0"></i> Full-resolution download</li>
+        </ul>
+      </div>
+
+      <div class="bg-paper border border-ink/[0.08] rounded-2xl p-6 md:p-7">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-2 h-2 rounded-full bg-graphite"></span>
+          <span class="font-mono text-[10px] tracking-widest uppercase text-graphite">Add-ons</span>
+        </div>
+        <div class="mb-6">
+          <span class="font-display font-extrabold text-3xl text-ink">Flexible</span>
+        </div>
+        <ul class="space-y-4 text-sm pt-5 border-t border-ink/[0.08]">
+          <li class="flex items-start justify-between gap-4">
+            <div>
+              <div class="font-medium text-ink">Extra guests</div>
+              <div class="text-xs text-graphite mt-0.5">Beyond 5 · up to 10 per room</div>
+            </div>
+            <div class="font-mono text-sm text-ink whitespace-nowrap">+₱500</div>
+          </li>
+          <li class="flex items-start justify-between gap-4">
+            <div>
+              <div class="font-medium text-ink">Both rooms</div>
+              <div class="text-xs text-graphite mt-0.5">Up to 15 guests total</div>
+            </div>
+            <div class="font-mono text-sm text-ink whitespace-nowrap">+₱2,500</div>
+          </li>
+          <li class="flex items-start justify-between gap-4">
+            <div>
+              <div class="font-medium text-ink">Pets 🐾</div>
+              <div class="text-xs text-graphite mt-0.5">Always welcome</div>
+            </div>
+            <div class="font-mono text-sm text-sage whitespace-nowrap">Free</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BOOKING FLOW ================= -->
+<section id="booking" class="py-16 md:py-24 bg-cream/50 border-b border-ink/[0.06] scroll-mt-16">
+  <div class="max-w-[1100px] mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mb-10 reveal">
+      <div class="font-mono text-[10px] tracking-widest uppercase text-tangerine mb-4">Reserve your slot</div>
+      <h2 class="font-display font-extrabold text-ink text-3xl md:text-5xl leading-[1.05] tracking-tight">
+        Book a session
+      </h2>
+      <p class="mt-4 text-graphite text-sm md:text-base font-light">
+        Everything updates live. Your reservation locks in and syncs with the FRAMES Google Calendar immediately after payment.
+      </p>
+    </div>
+
+    <form id="booking-form" class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start" novalidate>
+      <div class="lg:col-span-7 space-y-5">
+        <!-- Room -->
+        <fieldset class="bg-paper border border-ink/[0.08] rounded-2xl p-5 md:p-6 reveal">
+          <legend class="flex items-center justify-between w-full mb-4">
+            <span class="font-mono text-[10px] tracking-widest uppercase text-graphite">1. Room Suite</span>
+            <span id="selected-room-label" class="font-mono text-[10px] tracking-widest uppercase text-tangerine">Concrete Room</span>
+          </legend>
+          <div class="grid grid-cols-3 gap-2.5">
+            <button type="button" onclick="setRoom('concrete')" id="btn-concrete"
+              class="room-btn p-3.5 rounded-xl border-2 border-tangerine bg-tangerine/5 text-left transition-all" aria-pressed="true">
+              <span class="block font-display font-bold text-ink text-sm">Concrete</span>
+              <span class="block font-mono text-[10px] text-graphite mt-0.5">₱2,500+</span>
+            </button>
+            <button type="button" onclick="setRoom('white')" id="btn-white"
+              class="room-btn p-3.5 rounded-xl border-2 border-ink/10 bg-paper text-left transition-all hover:border-ink/30" aria-pressed="false">
+              <span class="block font-display font-bold text-ink text-sm">White</span>
+              <span class="block font-mono text-[10px] text-graphite mt-0.5">₱2,500+</span>
+            </button>
+            <button type="button" onclick="setRoom('both')" id="btn-both"
+              class="room-btn p-3.5 rounded-xl border-2 border-ink/10 bg-paper text-left transition-all hover:border-ink/30" aria-pressed="false">
+              <span class="block font-display font-bold text-ink text-sm">Both</span>
+              <span class="block font-mono text-[10px] text-graphite mt-0.5">₱5,000+</span>
+            </button>
+          </div>
+        </fieldset>
+
+        <!-- Date -->
+        <fieldset class="bg-paper border border-ink/[0.08] rounded-2xl p-5 md:p-6 reveal">
+          <legend class="flex items-center justify-between w-full mb-4">
+            <span class="font-mono text-[10px] tracking-widest uppercase text-graphite">2. Date</span>
+            <span id="rate-badge" class="font-mono text-[10px] tracking-widest uppercase px-2.5 py-0.5 rounded-full bg-sage/15 text-sage">Off-peak</span>
+          </legend>
+          <div class="grid grid-cols-4 sm:grid-cols-7 gap-2" id="date-selector" role="radiogroup" aria-label="Select date"></div>
+        </fieldset>
+
+        <!-- Time -->
+        <fieldset class="bg-paper border border-ink/[0.08] rounded-2xl p-5 md:p-6 reveal">
+          <legend class="font-mono text-[10px] tracking-widest uppercase text-graphite mb-4 block">3. Time Slot (45 Min Session)</legend>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2" id="slot-grid" role="radiogroup" aria-label="Select time"></div>
+        </fieldset>
+
+        <!-- Guests & Pets -->
+        <fieldset class="bg-paper border border-ink/[0.08] rounded-2xl p-5 md:p-6 reveal">
+          <legend class="font-mono text-[10px] tracking-widest uppercase text-graphite mb-4 block">4. Party Size</legend>
+          <div class="space-y-5">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <div class="font-medium text-sm text-ink">Number of guests</div>
+                <div class="text-xs text-graphite mt-0.5 font-light">First 5 included · +₱500 each after</div>
+              </div>
+              <div class="flex items-center gap-3 bg-cream border border-ink/10 rounded-full p-1">
+                <button type="button" onclick="adjustGuests(-1)" class="w-8 h-8 rounded-full hover:bg-ink hover:text-paper flex items-center justify-center transition-colors font-bold disabled:opacity-30" id="guest-minus">−</button>
+                <span id="guest-count" class="font-display font-bold text-lg w-7 text-center tabular-nums">2</span>
+                <button type="button" onclick="adjustGuests(1)" class="w-8 h-8 rounded-full hover:bg-ink hover:text-paper flex items-center justify-center transition-colors font-bold disabled:opacity-30" id="guest-plus">+</button>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 pt-5 border-t border-ink/[0.08]">
+              <div>
+                <div class="font-medium text-sm text-ink">Bringing pets? 🐾</div>
+                <div class="text-xs text-graphite mt-0.5 font-light">Always free of charge</div>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="pet-toggle" onchange="togglePets()" class="sr-only peer">
+                <span class="w-11 h-6 bg-ink/15 peer-checked:bg-tangerine rounded-full transition-colors relative
+                             after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:w-5 after:h-5 after:bg-paper after:rounded-full after:transition-transform
+                             peer-checked:after:translate-x-5 after:shadow-sm"></span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Contact -->
+        <fieldset class="bg-paper border border-ink/[0.08] rounded-2xl p-5 md:p-6 reveal">
+          <legend class="font-mono text-[10px] tracking-widest uppercase text-graphite mb-4 block">5. Your Details</legend>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label for="cust-name" class="sr-only">Full name</label>
+              <input type="text" id="cust-name" required placeholder="Full name" autocomplete="name"
+                     class="w-full bg-cream border border-ink/10 rounded-xl px-4 py-3 text-ink placeholder:text-graphite/60 focus:outline-none focus:border-tangerine transition-colors">
+            </div>
+            <div>
+              <label for="cust-phone" class="sr-only">Mobile number</label>
+              <input type="tel" id="cust-phone" required placeholder="Mobile (GCash/Viber)" autocomplete="tel" inputmode="tel"
+                     class="w-full bg-cream border border-ink/10 rounded-xl px-4 py-3 text-ink placeholder:text-graphite/60 focus:outline-none focus:border-tangerine transition-colors">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="cust-email" class="sr-only">Email</label>
+              <input type="email" id="cust-email" required placeholder="Email address" autocomplete="email" inputmode="email"
+                     class="w-full bg-cream border border-ink/10 rounded-xl px-4 py-3 text-ink placeholder:text-graphite/60 focus:outline-none focus:border-tangerine transition-colors">
+              <p class="text-xs text-graphite mt-2 font-light">Confirmation and Google Calendar invite will be sent here.</p>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- RIGHT: Sticky Summary -->
+      <aside class="lg:col-span-5 lg:sticky lg:top-20 reveal" aria-label="Booking summary">
+        <div class="bg-paper border border-ink/[0.08] rounded-2xl overflow-hidden shadow-sm">
+          <div id="summary-photo" class="aspect-[16/9] ph-warm-3 ph-grain transition-all duration-300"></div>
+
+          <div class="p-5 md:p-6">
+            <div class="flex items-center justify-between mb-5">
+              <h3 class="font-display font-bold text-lg text-ink">Session Overview</h3>
+              <span class="font-mono text-[10px] tracking-widest uppercase text-emerald-700 flex items-center gap-1 font-medium">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> G-Cal Sync
+              </span>
+            </div>
+
+            <dl class="space-y-3 text-sm border-y border-ink/[0.08] py-5 mb-5 font-light">
+              <div class="flex justify-between gap-4">
+                <dt class="text-graphite">Room</dt>
+                <dd id="summary-room" class="font-medium text-ink text-right">Concrete Room</dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-graphite">When</dt>
+                <dd id="summary-datetime" class="font-medium text-ink text-right">—</dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-graphite">Rate</dt>
+                <dd id="summary-rate-type" class="font-medium text-sage text-right">Off-peak</dd>
+              </div>
+              <div class="flex justify-between gap-4">
+                <dt class="text-graphite">Guests</dt>
+                <dd id="summary-guests" class="font-medium text-ink text-right">2 people</dd>
+              </div>
+            </dl>
+
+            <div id="price-breakdown" class="space-y-2 text-sm mb-5 font-light"></div>
+
+            <div class="flex justify-between items-baseline mb-6 pt-5 border-t border-ink/[0.08]">
+              <span class="font-mono text-[10px] tracking-widest uppercase text-graphite">Total</span>
+              <span class="font-display font-extrabold text-3xl text-ink tracking-tight tabular-nums" id="price-total">₱2,500</span>
+            </div>
+
+            <button type="button" onclick="submitBooking()" class="w-full py-4 bg-tangerine hover:bg-tangerineDark text-paper font-medium rounded-full transition-colors flex items-center justify-center gap-2 shadow-[0_8px_20px_-8px_rgba(230,81,0,0.5)]">
+              <i data-lucide="lock" class="w-4 h-4"></i>
+              Pay & confirm booking
+            </button>
+
+            <div class="mt-4 flex items-center justify-center gap-4 text-[10px] font-mono tracking-widest uppercase text-graphite">
+              <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-sage"></i> Free reschedule</span>
+              <span class="flex items-center gap-1.5"><i data-lucide="check" class="w-3 h-3 text-sage"></i> PayMongo Verified</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-16 md:py-24 border-b border-ink/[0.06]">
+  <div class="max-w-[900px] mx-auto px-5 md:px-8">
+    <div class="mb-10 reveal">
+      <div class="font-mono text-[10px] tracking-widest uppercase text-tangerine mb-4">Good to know</div>
+      <h2 class="font-display font-extrabold text-ink text-3xl md:text-5xl leading-[1.05] tracking-tight">
+        Common questions
+      </h2>
+    </div>
+
+    <div class="space-y-2 reveal">
+      <details class="group bg-paper border border-ink/[0.08] rounded-2xl px-5 md:px-6 py-4">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-semibold text-base md:text-lg pr-2 text-ink">Do I really get unlimited photos?</span>
+          <i data-lucide="plus" class="faq-icon w-5 h-5 text-tangerine transition-transform shrink-0"></i>
+        </summary>
+        <p class="mt-3 text-sm text-graphite leading-relaxed font-light">Yes — everything you shoot is yours. You'll receive a high-resolution Google Drive / private gallery download link within 24 hours.</p>
+      </details>
+
+      <details class="group bg-paper border border-ink/[0.08] rounded-2xl px-5 md:px-6 py-4">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-semibold text-base md:text-lg pr-2 text-ink">What if I'm shy about posing?</span>
+          <i data-lucide="plus" class="faq-icon w-5 h-5 text-tangerine transition-transform shrink-0"></i>
+        </summary>
+        <p class="mt-3 text-sm text-graphite leading-relaxed font-light">That's exactly why we don't have monitors or a photographer in the room. Just you, your people, and a clicker.</p>
+      </details>
+
+      <details class="group bg-paper border border-ink/[0.08] rounded-2xl px-5 md:px-6 py-4">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-semibold text-base md:text-lg pr-2 text-ink">Can I bring my dog or cat?</span>
+          <i data-lucide="plus" class="faq-icon w-5 h-5 text-tangerine transition-transform shrink-0"></i>
+        </summary>
+        <p class="mt-3 text-sm text-graphite leading-relaxed font-light">Absolutely, and they are completely free. Just check the pet box during booking so we have the room prepped.</p>
+      </details>
+
+      <details class="group bg-paper border border-ink/[0.08] rounded-2xl px-5 md:px-6 py-4">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-semibold text-base md:text-lg pr-2 text-ink">Where are you located?</span>
+          <i data-lucide="plus" class="faq-icon w-5 h-5 text-tangerine transition-transform shrink-0"></i>
+        </summary>
+        <p class="mt-3 text-sm text-graphite leading-relaxed font-light">215 Salcedo, Legazpi Village, Makati. Walking distance from Legazpi Active Park and Washington SyCip Park.</p>
+      </details>
+
+      <details class="group bg-paper border border-ink/[0.08] rounded-2xl px-5 md:px-6 py-4">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="font-display font-semibold text-base md:text-lg pr-2 text-ink">What payment methods do you accept?</span>
+          <i data-lucide="plus" class="faq-icon w-5 h-5 text-tangerine transition-transform shrink-0"></i>
+        </summary>
+        <p class="mt-3 text-sm text-graphite leading-relaxed font-light">GCash, Maya, QR Ph, or debit/credit cards through PayMongo. Instant automated confirmation.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="py-16 md:py-24 bg-cream/50">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div class="lg:col-span-5 reveal">
+        <div class="font-mono text-[10px] tracking-widest uppercase text-tangerine mb-4">Visit us</div>
+        <h2 class="font-display font-extrabold text-ink text-3xl md:text-5xl leading-[1.05] tracking-tight mb-6">
+          215 Salcedo<br>
+          <span class="font-serif italic font-normal text-graphite">Legazpi Village, Makati.</span>
+        </h2>
+        <ul class="space-y-4 text-sm font-light">
+          <li class="flex items-start gap-3">
+            <i data-lucide="map-pin" class="w-5 h-5 text-tangerine mt-0.5 shrink-0"></i>
+            <div>
+              <div class="font-medium text-ink">215 Salcedo Street</div>
+              <div class="text-graphite">Legazpi Village, Makati</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="clock" class="w-5 h-5 text-tangerine mt-0.5 shrink-0"></i>
+            <div>
+              <div class="font-medium text-ink">Open daily</div>
+              <div class="text-graphite">11:00 AM — 8:00 PM</div>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="instagram" class="w-5 h-5 text-tangerine mt-0.5 shrink-0"></i>
+            <div>
+              <div class="font-medium text-ink">@frames.photostudio</div>
+              <div class="text-graphite">DM us for questions</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-7 reveal">
+        <div class="aspect-[16/10] rounded-2xl bg-linen border border-ink/[0.06] overflow-hidden relative">
+          <div class="absolute inset-0" style="background-image: linear-gradient(rgba(20,20,22,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(20,20,22,0.06) 1px, transparent 1px); background-size: 40px 40px;"></div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+            <div class="w-12 h-12 rounded-full bg-tangerine flex items-center justify-center mx-auto mb-2 shadow-[0_8px_20px_-4px_rgba(230,81,0,0.5)]">
+              <i data-lucide="map-pin" class="w-6 h-6 text-paper"></i>
+            </div>
+            <div class="font-display font-bold text-ink text-sm">FRAMES</div>
+            <div class="font-mono text-[10px] text-graphite tracking-widest">14.5535°N, 121.0184°E</div>
+          </div>
+          <a href="https://maps.google.com/?q=215+Salcedo+Legazpi+Village+Makati" target="_blank" rel="noopener"
+             class="absolute bottom-4 right-4 inline-flex items-center gap-2 px-4 py-2 bg-paper text-ink rounded-full text-xs font-medium shadow hover:bg-ink hover:text-paper transition-colors">
+            <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+            Get directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-ink text-paper pt-16 pb-8">
+  <div class="max-w-[1200px] mx-auto px-5 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-paper/10">
+      <div class="md:col-span-5">
+        <div class="font-display font-extrabold text-3xl tracking-tight mb-4">
+          FRAMES<span class="text-tangerine">.</span>
+        </div>
+        <p class="text-paper/60 max-w-sm leading-relaxed text-sm font-light">
+          A private self-photo studio in Legazpi Village, Makati. For people who just want to be themselves in front of the camera.
+        </p>
+      </div>
+      <div class="md:col-span-3">
+        <div class="font-mono text-[10px] tracking-widest uppercase text-tangerine mb-4">Studio</div>
+        <ul class="space-y-3 text-sm text-paper/70 font-light">
+          <li><a href="#booking" class="hover:text-paper transition-colors">Book a session</a></li>
+          <li><a href="#suites" class="hover:text-paper transition-colors">The rooms</a></li>
+          <li><a href="#pricing" class="hover:text-paper transition-colors">Pricing</a></li>
+          <li><a href="#faq" class="hover:text-paper transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-4">
+        <div class="font-mono text-[10px] tracking-widest uppercase text-tangerine mb-4">Visit</div>
+        <ul class="space-y-3 text-sm text-paper/70 font-light">
+          <li>215 Salcedo, Legazpi Village</li>
+          <li>Makati, Metro Manila</li>
+          <li class="pt-2">hello@frames.studio</li>
+          <li class="flex items-center gap-2 text-paper pt-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-sage"></span>
+            Open daily · 11AM — 8PM
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-paper/50 font-mono">
+      <div>© 2024 FRAMES Studio. Made in Makati.</div>
+      <div class="tracking-widest uppercase">14.5535°N · 121.0184°E</div>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-cta fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-paper/95 backdrop-blur-md border-t border-ink/[0.08] px-4 py-3">
+  <div class="flex items-center justify-between gap-3">
+    <div>
+      <div class="font-mono text-[10px] tracking-widest uppercase text-graphite">Your total</div>
+      <div class="font-display font-extrabold text-xl text-ink tabular-nums" id="mobile-total">₱2,500</div>
+    </div>
+    <a href="#booking" class="inline-flex items-center gap-2 px-5 py-3 bg-tangerine text-paper text-sm font-medium rounded-full">
+      Book now
+      <i data-lucide="arrow-right" class="w-4 h-4"></i>
+    </a>
+  </div>
+</div>
+
+<!-- PAYMONGO MODAL -->
+<div id="paymongo-modal" class="fixed inset-0 z-[100] bg-ink/60 backdrop-blur-sm hidden items-center justify-center p-4" role="dialog" aria-modal="true">
+  <div class="bg-paper w-full max-w-md rounded-3xl p-6 md:p-8 shadow-2xl">
+    <div class="flex justify-between items-center mb-6">
+      <span class="font-mono text-[10px] tracking-widest uppercase text-graphite">PayMongo Checkout</span>
+      <button type="button" onclick="closePayMongoModal()" class="w-8 h-8 rounded-full hover:bg-ink/5 flex items-center justify-center text-graphite hover:text-ink">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+    <div class="text-center mb-6">
+      <div class="font-mono text-[10px] tracking-widest uppercase text-graphite mb-2">Amount due</div>
+      <div class="font-display font-extrabold text-4xl text-ink tracking-tight tabular-nums" id="modal-amount">₱2,500</div>
+      <div class="text-xs text-graphite mt-2 font-mono">FRAMES Studio · Makati</div>
+    </div>
+    <div class="mb-6">
+      <div class="font-mono text-[10px] tracking-widest uppercase text-graphite mb-3">Select payment method</div>
+      <div class="grid grid-cols-2 gap-2 font-medium text-xs">
+        <button type="button" class="p-3 rounded-xl border-2 border-tangerine bg-tangerine/5 text-ink font-semibold">GCash</button>
+        <button type="button" class="p-3 rounded-xl border-2 border-ink/10 text-graphite">Maya</button>
+        <button type="button" class="p-3 rounded-xl border-2 border-ink/10 text-graphite">QR Ph</button>
+        <button type="button" class="p-3 rounded-xl border-2 border-ink/10 text-graphite">Card</button>
+      </div>
+    </div>
+    <button type="button" onclick="simulatePayment()" class="w-full py-3.5 bg-ink hover:bg-tangerine text-paper font-medium rounded-full transition-colors text-sm">
+      Continue to payment
+    </button>
+    <p class="text-[10px] text-graphite text-center mt-4 font-mono">
+      Slot automatically updates FRAMES Google Calendar on completion.
+    </p>
+  </div>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div id="success-modal" class="fixed inset-0 z-[100] bg-ink/70 backdrop-blur-md hidden items-center justify-center p-4" role="dialog" aria-modal="true">
+  <div class="bg-paper w-full max-w-md rounded-3xl p-8 text-center shadow-2xl">
+    <div class="w-14 h-14 rounded-full bg-sage/15 flex items-center justify-center mx-auto mb-5">
+      <i data-lucide="check" class="w-7 h-7 text-sage"></i>
+    </div>
+    <h2 class="font-display font-extrabold text-2xl text-ink mb-2 tracking-tight">You're booked!</h2>
+    <p class="text-sm text-graphite leading-relaxed mb-6 font-light">
+      Your slot is locked in and synced with our studio calendar. We've sent confirmation to your email.
+    </p>
+    <div class="bg-cream rounded-xl p-4 text-left mb-6 space-y-2 text-sm font-light">
+      <div class="flex justify-between gap-3">
+        <span class="text-graphite">Room</span>
+        <span id="success-room" class="font-medium text-ink text-right">—</span>
+      </div>
+      <div class="flex justify-between gap-3">
+        <span class="text-graphite">When</span>
+        <span id="success-when" class="font-medium text-ink text-right">—</span>
+      </div>
+      <div class="flex justify-between gap-3">
+        <span class="text-graphite">Calendar</span>
+        <span class="font-mono text-xs text-blue-700 font-medium text-right">Synced to G-Cal ✓</span>
+      </div>
+    </div>
+    <button type="button" onclick="closeSuccessModal()" class="w-full py-3.5 bg-ink hover:bg-tangerine text-paper font-medium rounded-full transition-colors text-sm">
+      Done
+    </button>
+  </div>
+</div>
+
+<script>
+const state = {
+  room: 'concrete',
+  selectedDateIndex: 0,
+  selectedSlot: '15:00',
+  guests: 2,
+  hasPets: false,
+  dates: []
+};
+
+const SLOTS = [
+  { time: '11:00', label: '11:00 AM' },
+  { time: '12:00', label: '12:00 PM' },
+  { time: '13:00', label: '1:00 PM' },
+  { time: '14:00', label: '2:00 PM' },
+  { time: '15:00', label: '3:00 PM' },
+  { time: '16:00', label: '4:00 PM' },
+  { time: '17:00', label: '5:00 PM' },
+  { time: '18:00', label: '6:00 PM' },
+  { time: '19:00', label: '7:00 PM' }
+];
+
+const ROOM_NAMES = { concrete: 'Concrete Room', white: 'White Room', both: 'Both Suites' };
+const ROOM_PHOTO_CLASSES = {
+  concrete: 'ph-warm-3',
+  white: 'ph-cream',
+  both: 'ph-warm-2'
+};
+
+function initDates() {
+  const days = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+  const months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  const now = new Date();
+  state.dates = [];
+  for (let i = 1; i <= 7; i++) {
+    const d = new Date(now);
+    d.setDate(now.getDate() + i);
+    const day = d.getDay();
+    state.dates.push({
+      dateObj: d,
+      dayName: days[day],
+      dateNum: d.getDate(),
+      isWeekend: (day === 0 || day === 6),
+      formatted: `${days[day]} ${months[d.getMonth()]} ${d.getDate()}`
+    });
+  }
+}
+
+function isPeak(dateObj, slot) {
+  if (dateObj.isWeekend) return true;
+  return parseInt(slot.split(':')[0], 10) >= 18;
+}
+
+function calculateTotal() {
+  const curDate = state.dates[state.selectedDateIndex];
+  const peak = isPeak(curDate, state.selectedSlot);
+  const base = state.room === 'both' ? (peak ? 6000 : 5000) : (peak ? 3000 : 2500);
+  const extraGuests = Math.max(0, state.guests - 5);
+  const extraCost = extraGuests * 500;
+  return { base, extraGuests, extraCost, total: base + extraCost, isPeak: peak };
+}
+
+function updateUI() {
+  const p = calculateTotal();
+  const curDate = state.dates[state.selectedDateIndex];
+  const slotObj = SLOTS.find(s => s.time === state.selectedSlot);
+
+  ['concrete','white','both'].forEach(r => {
+    const btn = document.getElementById('btn-' + r);
+    const selected = state.room === r;
+    btn.setAttribute('aria-pressed', selected ? 'true' : 'false');
+    btn.className = 'room-btn p-3.5 rounded-xl border-2 text-left transition-all ' +
+      (selected ? 'border-tangerine bg-tangerine/5' : 'border-ink/10 bg-paper hover:border-ink/30');
+  });
+
+  document.getElementById('selected-room-label').innerText = ROOM_NAMES[state.room];
+  document.getElementById('summary-room').innerText = ROOM_NAMES[state.room];
+  document.getElementById('guest-count').innerText = state.guests;
+  document.getElementById('summary-guests').innerText =
+    `${state.guests} ${state.guests === 1 ? 'person' : 'people'}${state.hasPets ? ' + pets' : ''}`;
+  document.getElementById('summary-datetime').innerText =
+    `${curDate.formatted} · ${slotObj ? slotObj.label : ''}`;
+
+  document.getElementById('guest-minus').disabled = state.guests <= 1;
+  document.getElementById('guest-plus').disabled = state.guests >= 15;
+
+  const photo = document.getElementById('summary-photo');
+  photo.className = 'aspect-[16/9] ph-grain transition-all duration-300 ' + ROOM_PHOTO_CLASSES[state.room];
+
+  const badge = document.getElementById('rate-badge');
+  if (p.isPeak) {
+    badge.className = 'font-mono text-[10px] tracking-widest uppercase px-2.5 py-0.5 rounded-full bg-tangerine/15 text-tangerine';
+    badge.innerText = 'Peak';
+    document.getElementById('summary-rate-type').innerText = 'Peak hours';
+    document.getElementById('summary-rate-type').className = 'font-medium text-tangerine text-right';
+  } else {
+    badge.className = 'font-mono text-[10px] tracking-widest uppercase px-2.5 py-0.5 rounded-full bg-sage/15 text-sage';
+    badge.innerText = 'Off-peak';
+    document.getElementById('summary-rate-type').innerText = 'Off-peak';
+    document.getElementById('summary-rate-type').className = 'font-medium text-sage text-right';
+  }
+
+  const breakdown = document.getElementById('price-breakdown');
+  breakdown.innerHTML = `
+    <div class="flex justify-between gap-3 text-graphite">
+      <span>Session (${p.isPeak ? 'peak' : 'off-peak'})</span>
+      <span class="tabular-nums font-mono">₱${p.base.toLocaleString()}</span>
+    </div>
+    ${p.extraGuests > 0 ? `
+    <div class="flex justify-between gap-3 text-graphite">
+      <span>${p.extraGuests} extra guest${p.extraGuests > 1 ? 's' : ''}</span>
+      <span class="tabular-nums font-mono">₱${p.extraCost.toLocaleString()}</span>
+    </div>` : ''}
+  `;
+
+  document.getElementById('price-total').innerText = `₱${p.total.toLocaleString()}`;
+  document.getElementById('mobile-total').innerText = `₱${p.total.toLocaleString()}`;
+
+  const dateContainer = document.getElementById('date-selector');
+  dateContainer.innerHTML = '';
+  state.dates.forEach((d, idx) => {
+    const isSel = idx === state.selectedDateIndex;
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('role', 'radio');
+    b.setAttribute('aria-checked', isSel ? 'true' : 'false');
+    b.setAttribute('aria-label', d.formatted);
+    b.onclick = () => { state.selectedDateIndex = idx; updateUI(); };
+    b.className = 'p-3 rounded-xl border-2 text-center transition-all ' +
+      (isSel ? 'border-ink bg-ink text-paper' : 'border-ink/10 bg-paper text-ink hover:border-ink/30');
+    b.innerHTML = `
+      <div class="font-mono text-[9px] tracking-widest ${isSel ? 'text-paper/60' : 'text-graphite'} mb-0.5">${d.dayName}</div>
+      <div class="font-display font-bold text-base leading-none">${d.dateNum}</div>
+    `;
+    dateContainer.appendChild(b);
+  });
+
+  const slotContainer = document.getElementById('slot-grid');
+  slotContainer.innerHTML = '';
+  SLOTS.forEach(s => {
+    const isSel = s.time === state.selectedSlot;
+    const peak = isPeak(curDate, s.time);
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('role', 'radio');
+    b.setAttribute('aria-checked', isSel ? 'true' : 'false');
+    b.setAttribute('aria-label', `${s.label} — ${peak ? 'peak' : 'off-peak'}`);
+    b.onclick = () => { state.selectedSlot = s.time; updateUI(); };
+    b.className = 'slot-btn p-3 rounded-xl border-2 text-left transition-all ' +
+      (isSel ? 'border-ink bg-ink text-paper' : 'border-ink/10 bg-paper text-ink hover:border-ink/30');
+    b.innerHTML = `
+      <div class="font-medium text-xs ${isSel ? 'text-paper' : 'text-ink'} mb-0.5">${s.label}</div>
+      <div class="font-mono text-[9px] tracking-widest ${isSel ? 'text-tangerine' : (peak ? 'text-tangerine' : 'text-sage')}">${peak ? 'PEAK' : 'OFF-PEAK'}</div>
+    `;
+    slotContainer.appendChild(b);
+  });
+}
+
+function setRoom(r) { state.room = r; updateUI(); }
+
+function setRoomAndScroll(r) {
+  state.room = r;
+  updateUI();
+  document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function adjustGuests(d) {
+  state.guests = Math.max(1, Math.min(15, state.guests + d));
+  updateUI();
+}
+
+function togglePets() {
+  state.hasPets = document.getElementById('pet-toggle').checked;
+  updateUI();
+}
+
+function validateForm() {
+  const fields = [
+    { id: 'cust-name',  label: 'Full name',     test: v => v.trim().length >= 2 },
+    { id: 'cust-phone', label: 'Mobile number', test: v => v.replace(/\D/g,'').length >= 10 },
+    { id: 'cust-email', label: 'Email address', test: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) }
+  ];
+
+  let firstInvalid = null;
+  let valid = true;
+
+  fields.forEach(({ id, label, test }) => {
+    const input = document.getElementById(id);
+    const existing = input.parentNode.querySelector('.field-error-msg');
+    if (existing) existing.remove();
+    input.classList.remove('field-error');
+
+    if (!test(input.value)) {
+      valid = false;
+      input.classList.add('field-error');
+      const msg = document.createElement('span');
+      msg.className = 'field-error-msg';
+      msg.innerText = `Please enter a valid ${label.toLowerCase()}.`;
+      input.parentNode.appendChild(msg);
+      if (!firstInvalid) firstInvalid = input;
+    }
+  });
+
+  if (firstInvalid) {
+    firstInvalid.focus();
+    firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+  return valid;
+}
+
+function submitBooking() {
+  if (!validateForm()) return;
+  openPayMongoModal();
+}
+
+function openPayMongoModal() {
+  const p = calculateTotal();
+  document.getElementById('modal-amount').innerText = `₱${p.total.toLocaleString()}`;
+  const modal = document.getElementById('paymongo-modal');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePayMongoModal() {
+  const modal = document.getElementById('paymongo-modal');
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+  document.body.style.overflow = '';
+}
+
+function simulatePayment() {
+  closePayMongoModal();
+  const curDate = state.dates[state.selectedDateIndex];
+  const slotObj = SLOTS.find(s => s.time === state.selectedSlot);
+
+  document.getElementById('success-room').innerText = ROOM_NAMES[state.room];
+  document.getElementById('success-when').innerText = `${curDate.formatted} · ${slotObj ? slotObj.label : ''}`;
+
+  const modal = document.getElementById('success-modal');
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSuccessModal() {
+  const modal = document.getElementById('success-modal');
+  modal.classList.add('hidden');
+  modal.classList.remove('flex');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closePayMongoModal();
+    closeSuccessModal();
+  }
+});
+
+const revealObs = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+
+function initMobileCTA() {
+  const cta = document.querySelector('.mobile-cta');
+  const booking = document.getElementById('booking');
+  if (!cta || !booking) return;
+
+  window.addEventListener('scroll', () => {
+    const bookingTop = booking.getBoundingClientRect().top;
+    if (window.scrollY > 400 && bookingTop > window.innerHeight) {
+      cta.classList.add('visible');
+    } else {
+      cta.classList.remove('visible');
+    }
+  }, { passive: true });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initDates();
+  updateUI();
+  lucide.createIcons();
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+  initMobileCTA();
+});
+</script>
+</body>
+</html>
